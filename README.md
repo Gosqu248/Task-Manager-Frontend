@@ -2,6 +2,18 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
 
+## Technologies Used
+
+- **Frontend Framework**: Angular 19
+- **UI Components**: Angular Material
+- **Styling**: SCSS
+- **State Management**: RxJS
+- **HTTP Client**: Angular HttpClient
+
+## Backend Repository
+
+The backend for this application is available at: [https://github.com/Gosqu248/Task-Manager](https://github.com/Gosqu248/Task-Manager)
+
 ## Development server
 
 To start a local development server, run:
