@@ -1,0 +1,27 @@
+<div class="task-list">
+  <mat-card *ngFor="let task of tasks" class="task-card">
+    <div class="content-wrapper">
+      <div class="text-content">
+        <h3 [class.completed]="task.completed">{{ task.title }}</h3>
+        <p [class.completed]="task.completed" class="description">{{task.description}}</p>
+        <button mat-flat-button
+                (click)="editTask(task)"
+                class="edit-button">
+          Edit
+        </button>
+      </div>
+      <div class="button-div">
+        <mat-checkbox [(ngModel)]="task.completed"
+                      (change)="toggleCompleted(task.id)"
+                      color="accent">
+        </mat-checkbox>
+        <button mat-raised-button
+                color="warn"
+                class="icon-button"
+                (click)="deleteTask(task.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>

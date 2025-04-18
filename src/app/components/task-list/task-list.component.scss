@@ -1,0 +1,78 @@
+.task-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.task-card {
+  display: flex;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.text-content {
+  flex: 1;
+
+  h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  .description {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  .edit-button {
+    margin-top: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+}
+
+.button-div {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  .icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    padding: 0 12px;
+
+    mat-icon {
+      font-size: 1.4rem;
+      height: 24px;
+      width: 24px;
+      margin: 0;
+    }
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}

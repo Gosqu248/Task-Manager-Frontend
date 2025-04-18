@@ -1,0 +1,12 @@
+<h2 class="dialog-title">{{ data.option === 'edit' ? 'Update current Task' : 'Add new Task' }}</h2>
+<form (submit)="addTask()" class="add-task-form">
+  <mat-form-field appearance="outline">
+    <input matInput [(ngModel)]="title" name="title" placeholder="Title" required >
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <textarea matInput [(ngModel)]="description" name="description" placeholder="Description" required rows="4" ></textarea>
+  </mat-form-field>
+  <button mat-flat-button type="submit" class="add-button">
+    {{ data.option === 'edit' ? 'Update Task' : 'Add Task' }}
+  </button>
+</form>

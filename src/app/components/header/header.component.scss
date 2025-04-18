@@ -1,0 +1,84 @@
+header {
+  padding: 2rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .title-section {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    left: 50px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .animated-text {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .animated-text span {
+    font-size: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .button-section {
+    margin-left: auto;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .theme-toggle-button {
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.27);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 8px 16px rgba(97, 94, 94, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    mat-icon {
+      display: inline-block;
+      margin-left: 0.5rem;
+      transform: rotate(0deg);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover mat-icon {
+      transform: rotate(360deg);
+    }
+
+    &:active {
+      transform: scale(0.95);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
